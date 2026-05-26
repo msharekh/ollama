@@ -44,4 +44,27 @@ Available Commands:
 
 Use """ to begin a multi-line message.
 Use \path\to\file to include .jpg, .png, .webp images, or .wav audio files.
- 
+
+
+http://localhost:11434
+Ollama is running
+
+## create app (client)
+
+pip install ollama
+
+C:\Users\Personal\Documents\Development\Ai\ollama
+
+ import ollama
+
+client = ollama.Client()
+
+model = "gemma3"
+prompt = "What is the capital of France?"
+
+#send a prompt to the model and get the response
+response = client.generate(model=model, prompt=prompt)
+
+#print the response
+print("response from the model")
+print(response.response)
