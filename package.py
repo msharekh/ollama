@@ -3,7 +3,10 @@ import ollama
 client = ollama.Client()
 
 model = "gemma3"
-prompt = "What is the capital of France?"
+prompt = input("Enter your prompt: ").strip()
+
+while not prompt:
+    prompt = input("Prompt cannot be empty. Enter your prompt: ").strip()
 
 #send a prompt to the model and get the response
 response = client.generate(model=model, prompt=prompt)
